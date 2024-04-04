@@ -7,25 +7,6 @@
 #include "better_types.hpp"
 #include "option.hpp"
 
-/*
-	[ capacity = max possible size ]
-	[ size     = current elements that are alive ]
-
-	Time complexity for `sparse_array` (one vector for data and one for alive). Is thread safe.
-		iterating - O(size) - sh_mutex
-		get       - O(1)
-		insert    - O(1)    - uq_mutex
-		erase     - O(size) - uq_mutex
-		clear     - O(size) - uq_mutex
-
-	Time complexity for `optional_array` (the other approach to implement this class). !Current implementation is not thread safe.
-		iterating - O(capacity)
-		get       - O(1)
-		insert    - O(1)
-		erase     - O(1)
-		clear     - O(capacity)
-*/
-
 namespace gef {
 
 	template <typename T>

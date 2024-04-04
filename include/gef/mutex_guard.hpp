@@ -3,8 +3,6 @@
 #include <shared_mutex>
 #include <type_traits>
 
-#include "option.hpp"
-
 
 namespace gef {
 
